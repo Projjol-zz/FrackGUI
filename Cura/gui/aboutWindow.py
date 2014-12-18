@@ -17,14 +17,14 @@ class aboutWindow(wx.Frame):
 		s = wx.BoxSizer(wx.VERTICAL)
 		p.SetSizer(s)
 
-		title = wx.StaticText(p, -1, 'Cura')
+		title = wx.StaticText(p, -1, 'Fracktory')
 		title.SetFont(wx.Font(18, wx.SWISS, wx.NORMAL, wx.BOLD))
 		s.Add(title, flag=wx.ALIGN_CENTRE|wx.EXPAND|wx.BOTTOM, border=5)
 
 		s.Add(wx.StaticText(p, -1, 'End solution for Open Source Fused Filament Fabrication 3D printing.'))
-		s.Add(wx.StaticText(p, -1, 'Cura is currently developed and maintained by Ultimaker.'))
+		s.Add(wx.StaticText(p, -1, 'Fracktory is currently developed and maintained by Fracktal Works.'))
 
-		s.Add(wx.StaticText(p, -1, 'Cura is build with the following components:'), flag=wx.TOP, border=10)
+		s.Add(wx.StaticText(p, -1, 'Fracktory is build with the following components:'), flag=wx.TOP, border=10)
 		self.addComponent('Cura', 'Graphical user interface', 'AGPLv3', 'https://github.com/daid/Cura')
 		self.addComponent('CuraEngine', 'GCode Generator', 'AGPLv3', 'https://github.com/Ultimaker/CuraEngine')
 		self.addComponent('Clipper', 'Polygon clipping library', 'Boost', 'http://www.angusj.com/delphi/clipper.php')
