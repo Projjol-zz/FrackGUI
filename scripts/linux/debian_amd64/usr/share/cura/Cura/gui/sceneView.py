@@ -63,7 +63,7 @@ class SceneView(openglGui.glGuiPanel):
 
 		self.openFileButton      = openglGui.glButton(self, 4, _("Load"), (0,0), self.showLoadModel)
 		self.printButton         = openglGui.glButton(self, 6, _("Print"), (1,0), self.OnPrintButton)
-		self.printButton.setDisabled(True)
+		self.printButton.setDisabled(False)
 
 		group = []
 		self.rotateToolButton = openglGui.glRadioButton(self, 8, _("Rotate"), (0,-1), group, self.OnToolSelect)
