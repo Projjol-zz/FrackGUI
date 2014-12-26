@@ -188,12 +188,10 @@ class mainWindow(wx.Frame):
 		i = helpMenu.Append(-1, _("Online documentation..."))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://daid.github.com/Cura'), i)
 		i = helpMenu.Append(-1, _("Report a problem..."))
-		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://github.com/daid/Cura/issues'), i)
-		i = helpMenu.Append(-1, _("Check for update..."))
-		self.Bind(wx.EVT_MENU, self.OnCheckForUpdate, i)
+		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://github.com/Projjol/FrackGUI/issues'), i)
 		i = helpMenu.Append(-1, _("Open YouMagine website..."))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://www.youmagine.com/'), i)
-		i = helpMenu.Append(-1, _("About Cura..."))
+		i = helpMenu.Append(-1, _("About Fracktory..."))
 		self.Bind(wx.EVT_MENU, self.OnAbout, i)
 		self.menubar.Append(helpMenu, _("Help"))
 		self.SetMenuBar(self.menubar)
@@ -462,10 +460,8 @@ class mainWindow(wx.Frame):
 			if n == int(profile.getPreferenceFloat('active_machine')):
 				i.Check(True)
 			self.Bind(wx.EVT_MENU, lambda e: self.OnSelectMachine(e.GetId() - 0x1000), i)
-
+			
 		self.machineMenu.AppendSeparator()
-		i = self.machineMenu.Append(-1, _("Add new machine..."))
-		self.Bind(wx.EVT_MENU, self.OnAddNewMachine, i)
 		i = self.machineMenu.Append(-1, _("Machine settings..."))
 		self.Bind(wx.EVT_MENU, self.OnMachineSettings, i)
 
