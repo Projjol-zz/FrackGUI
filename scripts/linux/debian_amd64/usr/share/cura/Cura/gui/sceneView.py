@@ -1291,11 +1291,11 @@ class SceneView(openglGui.glGuiPanel):
 		for n in xrange(0, len(polys[0])):
 			if not circular:
 				if n % 2 == 0:
-					glColor4ub(5, 171, 231, 96)
+					glColor4ub(160, 160, 160, 96)
 				else:
-					glColor4ub(5, 171, 231, 64)
+					glColor4ub(160, 160, 160, 64)
 			else:
-				glColor4ub(5, 171, 231, 96)
+				glColor4ub(160, 160, 160, 96)
 
 			glVertex3f(polys[0][n][0], polys[0][n][1], height)
 			glVertex3f(polys[0][n][0], polys[0][n][1], 0)
@@ -1304,7 +1304,7 @@ class SceneView(openglGui.glGuiPanel):
 		glEnd()
 
 		#Draw top of build volume.
-		glColor4ub(5, 171, 231, 128)
+		glColor4ub(160, 160, 160, 128)
 		glBegin(GL_TRIANGLE_FAN)
 		for p in polys[0][::-1]:
 			glVertex3f(p[0], p[1], height)

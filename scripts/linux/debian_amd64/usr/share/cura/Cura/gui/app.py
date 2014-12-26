@@ -106,6 +106,10 @@ class CuraApp(wx.App):
 		from Cura.util import resources
 		from Cura.util import version
 
+		for x in xrange(1,1000):
+			for y in xrange(1,100):
+				pass
+			pass
 		resources.setupLocalization(profile.getPreference('language'))  # it's important to set up localization at very beginning to install _
 
 		#If we do not have preferences yet, try to load it from a previous Cura install
